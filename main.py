@@ -3,13 +3,11 @@ import numpy as np
 import base64
 from fastapi import FastAPI, Body
 from ultralytics import YOLO
-import easyocr
 from pydantic import BaseModel
 
 app = FastAPI()
 
 yolo_model = YOLO('yolov8n.pt')
-ocr_reader = easyocr.Reader(['ru', 'en'])
 
 class ImageRequest(BaseModel):
     image: str
