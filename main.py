@@ -1,3 +1,8 @@
+
+import os
+os.environ["QT_QPA_PLATFORM"] = "offscreen"
+os.environ["CV_IO_MAX_IMAGE_PIXELS"] = "1099511627776" # на всякий случай для больших фото
+
 import cv2
 import numpy as np
 import base64
